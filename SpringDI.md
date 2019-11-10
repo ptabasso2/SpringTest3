@@ -41,3 +41,10 @@ Important: Jaeger is the **default type** if nothing is specified in the applica
 [Run]   java -jar build/libs/springtest0-1.0.jar
 </pre>
 
+### Test the application
+
+<pre style="font-size: 12px">
+[Run]   curl localhost:8080/Callme
+Ok
+</pre>
+
