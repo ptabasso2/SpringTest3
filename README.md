@@ -16,11 +16,11 @@ git clone https://github.com/ptabasso2/SpringTest3
 </pre>
 
 ### Configure the tracer
-In the `Application` class, we define three beans along with the `@ConditionalOnProperty` which will be used to identify each of the tracers by it's type (`trace.type` property).<br>
+In the `Application` class, we define three beans along with the `@ConditionalOnProperty` which will be used to identify each of the tracers by their type (`tracer.type` property).<br>
 
 Three types are available:
 + Jaeger
-+ ddtracer (This is the Datadog opentracing API (dd-trace-ot))
++ ddtracer (This is the Datadog opentracing API (`dd-trace-ot`))
 + ddjavaagent (Tracer that comes with the java agent)
 
 
