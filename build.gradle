@@ -34,7 +34,12 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile group: 'io.opentracing', name: 'opentracing-api', version: "0.32.0"
     compile group: 'io.opentracing', name: 'opentracing-util', version: "0.32.0"
-    compile group: 'com.datadoghq', name: 'dd-trace-ot', version: "0.36.0"
+    compile (group: 'com.datadoghq', name: 'dd-trace-ot', version: "0.36.0")
+    /*compile (group: 'com.datadoghq', name: 'dd-trace-ot', version: "0.36.0"){
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    }*/
+    //compile 'com.squareup.okhttp3:okhttp:4.0.0'
+
     compile 'io.jaegertracing:jaeger-client:0.32.0'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
