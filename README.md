@@ -34,13 +34,6 @@ java -jar build/libs/springtest0-1.0.jar -Dtracer.type=ddtracer
 
 Important: Jaeger is the **default type** if nothing is specified in the application.properties file or as system property
 
-### Build the application
-
-<pre style="font-size: 12px">
-COMP10619:~ pejman.tabassomi$ ./gradlew build
-</pre>
-
-
 ### Test the application with  Datadog
 
 _1. Start the  Datadog Agent_
@@ -49,7 +42,9 @@ COMP10619:~ pejman.tabassomi$ docker run -d --rm -h datadog --name datadog_agent
 </pre>
 
 _2. Run the application_
+<pre style="font-size: 12px">
 COMP10619:~ pejman.tabassomi$ java -jar build/libs/springtest0-1.0.jar -Dtracer.type=ddtracer
+</pre>
 
 _3. Run the test several times_ 
 <pre style="font-size: 12px">
@@ -57,7 +52,7 @@ COMP10619:~ pejman.tabassomi$ curl localhost:8080/Callme
 Ok
 </pre>
 
-_3. Check the results in the Datadog UI (APM traces)_
+_3. Check the results in the Datadog UI (APM traces)_<br>
 https://app.datadoghq.com/apm/traces
 
 
@@ -69,7 +64,9 @@ COMP10619:~ pejman.tabassomi$ docker run --rm -p 6831:6831/udp -p 6832:6832/udp 
 </pre>
 
 _2. Run the application_
+<pre style="font-size: 12px">
 COMP10619:~ pejman.tabassomi$ java -jar build/libs/springtest0-1.0.jar -Dtracer.type=jaeger
+</pre>
 
-_3. Check the results in the Jaeger UI (APM traces)_
+_3. Check the results in the Jaeger UI (APM traces)_<br>
 http://localhost:16686
