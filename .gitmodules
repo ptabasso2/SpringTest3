@@ -1,0 +1,3 @@
+[submodule "spring-kafka-ot33v2"]
+	path = spring-kafka-ot33v2
+	url = https://github.com/ptabasso2/SpringTest3
